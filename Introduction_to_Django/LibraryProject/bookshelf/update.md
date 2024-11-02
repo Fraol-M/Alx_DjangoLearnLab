@@ -1,9 +1,8 @@
-# Update Operation
+from bookshelf.models import Book
 
-## Command
-To update the title of the `Book` instance:
+# Create a Book instance
+book = Book.objects.get(id=1)
 
-```python
-retrieved_book.title = "Nineteen Eighty-Four"
-retrieved_book.save()
-print(retrieved_book.title)
+print(book.title, book.author, book.publication_year)
+# expected output
+1984, George Orwell, 1949

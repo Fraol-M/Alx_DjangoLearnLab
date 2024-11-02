@@ -1,8 +1,13 @@
-# Delete Operation
+from bookshelf.models import Book
 
-## Command
-To delete the `Book` instance:
+# Create a Book instance
+book = Book.objects.get(id=1)
 
-```python
-retrieved_book.delete()
-print("Book deleted")
+book.delete()
+
+books = Book.objects.all()
+
+print(books)
+
+# expected output
+<QuerySet []>
